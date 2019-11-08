@@ -1,0 +1,83 @@
+/* global styles */
+@import(css/grid.css);
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  width: 100%;
+  background: #ffffff;
+  font-family: 'Fira Sans', sans-serif;
+  margin: auto;
+}
+
+/* heading style */
+.page_header {
+  background: #4caf50;
+  grid-column: 1/-1;
+  height: 7vh;
+  width: auto;
+}
+
+/* hero section */
+.hero {
+  background-image: linear-gradient(to right bottom,
+    rgba(126, 213, 97, 0.4),
+    rgba(0, 0, 0, 0.3)),
+    url(../img/steak.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.hero-heading {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 1.5rem;
+}
+/* section styles*/
+section:nth-child(2n+3) {
+  background: #ffffff;
+  height: 50vh;
+  width: auto;
+}
+
+section:nth-child(even) {
+  background: #dcedc8;
+  height: 50vh;
+  width: auto;
+}
+
+/* image styles for sections */
+
+.img2 {
+  width: 15rem;
+  height: 20rem;
+  background-image: url(../img/asian.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-right: 5rem;
+}
+
+.img3 {
+  width: 15rem;
+  height: 20rem;
+  background-image: url(../img/burger.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-right: 5rem;
+}
+
+
+/*footer*/
+.footer {
+  background: #4caf50;
+  height: 5vh;
+}

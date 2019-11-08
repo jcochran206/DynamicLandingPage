@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header header header header"
+  "hero hero hero hero"
+  "main main main main"
+  "footer footer footer footer";
+}
+
+.page_header {
+  grid-area: header;
+}
+
+.hero {
+  grid-area: hero;
+}
+
+.footer {
+  grid-area: footer;
+}
