@@ -14,6 +14,7 @@ body {
   margin: auto;
 }
 
+
 /* heading style */
 .page_header {
   background: #4caf50;
@@ -22,6 +23,13 @@ body {
   width: auto;
 }
 
+.navbar ul{
+  display: flex;
+  list-style: none;
+  justify-content:flex-end;
+  margin: 0 20px;
+  padding: 20px
+}
 /* hero section */
 .hero {
   background-image: linear-gradient(to right bottom,
