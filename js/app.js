@@ -26,7 +26,7 @@ function buildNav() {
     const ldSectionName = ldSection.getAttribute("data-nav");
     // set href and id
     anchorTag.setAttribute('href', '#'+ldSection.id);
-    // set 
+    // set
     anchorTag.setAttribute('class', 'menu__link '+ldSectionName);
     anchorTag.textContent = ldSectionName;
     navLink.appendChild(anchorTag);
@@ -34,8 +34,40 @@ function buildNav() {
   }
 }
 
+// navbarLinks.forEach(elem => elem.addEventListener("click", navbarLinksClick));
+
+// for(let i=0, i<navbarLinks.length; i++ {
+//   navbarLinks[i].addEventListener("click", navbarLinksClick);
+// });
+
+/* function to scroll to navLink */
+// function navbarLinksClick(event){
+//   smoothScroll(event);
+//   console.log()
+// }
+function smoothScroll(){
+  const navLinks = document.querySelectorAll('a[href^="#"]');
+  for(i = 0; i < navLinks.length; i++){
+    navLinks[i].addEventListener('click', function() {
+    const navie = document.querySelector(this.getAttribute('href'));
+    navie.scrollTo({top: 100, behavior: 'smooth'
+    });
+
+    })
+  }
+};
+
+//function update classList
+// function updateClass(){
+//   for( i = 0; i < ldSections.length; i++){
+//     if()
+//   }
+// }
+
+
 
 /* document listener */
 document.addEventListener('DOMContentLoaded', (event) => {
     buildNav();
+    smoothScroll();
 });
