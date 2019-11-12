@@ -27,14 +27,19 @@ body {
   display: flex;
   list-style: none;
   justify-content:flex-end;
-  margin: 0 40px;
-  padding: 10px;
+  margin: 0 20px;
+  padding: 20px;
 }
 
 a {
   list-style: none;
   margin: 10px;
   color: #ffffff;
+}
+
+a:hover {
+  color: #FFC107;
+
 }
 
 
@@ -61,7 +66,7 @@ a {
 
 
 /* section styles*/
-section:nth-child(2n+3) {
+section:nth-child(1n+3) {
   background: #ffffff;
   height: 60vh;
   width: auto;
@@ -71,6 +76,12 @@ section:nth-child(even) {
   background: #dcedc8;
   height: 60vh;
   width: auto;
+
+}
+
+.title {
+  weight: bold;
+  color: #757575;
 }
 
 /* image styles for sections */
