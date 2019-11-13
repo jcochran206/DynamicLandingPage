@@ -51,11 +51,18 @@ function smoothScroll(){
 function inView(){
   const landingSection = document.querySelector('section');
   const domRect = landingSection.getBoundingClientRect();
-  const scrolled = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = document.documentElement.scrollHeight - window.innerHeight; //entire document height
+  let topps = domRect.top;
+  let bottomEnd = domRect.bottom;
+  if(topps >= 0 && bottomEnd - window.innerHeight){
+    console.log('yup');
+  }else{
+    console.log('nothing')
+  }
 
 
-  let view = (scrolled >= 0); //true
-  console.log(view);
+  let viewActive = (Math.ceil(topps)); //true
+  console.log(Math.ceil(viewActive));
 
 }
 
