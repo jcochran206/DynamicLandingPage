@@ -79,6 +79,10 @@ section:nth-child(even) {
 
 }
 
+.active-class {
+  border: 0.5rem solid #ffc107;
+}
+
 .title {
   weight: bold;
   color: #757575;

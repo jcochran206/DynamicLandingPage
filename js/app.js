@@ -15,17 +15,17 @@ function buildNav() {
   //1) select nav section
   const nav = document.querySelector('#list');
   //2 create text for 1st or top section link
-  
+
   //3) create loop to build links
-  for(const ldSection of ldSections) {
+  for(section of ldSections){
     // create li
     const navLink = document.createElement('li');
     // create anchor
     const anchorTag = document.createElement('a');
     // get section attr
-    const ldSectionName = ldSection.getAttribute("data-nav");
+    const ldSectionName = section.getAttribute("data-nav");
     // set href and id
-    anchorTag.setAttribute('href', '#'+ldSection.id);
+    anchorTag.setAttribute('href', '#'+section.id);
     // set
     anchorTag.setAttribute('class', 'menu__link '+ldSectionName);
     anchorTag.textContent = ldSectionName;
@@ -34,6 +34,7 @@ function buildNav() {
   }
 }
 
+// js smooth scroll
 function smoothScroll(){
   const navLinks = document.querySelectorAll('a[href^="#"]');
   for(i = 0; i < navLinks.length; i++){
@@ -45,6 +46,36 @@ function smoothScroll(){
     })
   }
 };
+
+// add active class to section
+function inView(){
+  const landingSection = document.querySelector('section');
+  const domRect = landingSection.getBoundingClientRect();
+  const scrolled = document.documentElement.scrollHeight - window.innerHeight;
+
+
+  let view = (scrolled >= 0); //true
+  console.log(view);
+
+}
+
+//added class
+function addClass(){
+  for(sector of ldSections){
+    if(inView(sector) && view == true){
+      sector.classList.add("active-class");
+    }else {
+      sector.classList.remove("active-class");
+    }
+  }
+}
+
+//Scroll listener
+
+window.addEventListener('scroll', () => {
+  addClass();
+  console.log("scrolled")
+})
 
 
 
